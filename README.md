@@ -1,115 +1,127 @@
-OverlayBPT - Rastreador de EXP para BPT
+🎮 OverlayBPT - Rastreador de EXP para BPT
+OverlayBPT é uma aplicação em C# que monitora a experiência (EXP) em tempo real no jogo BPT (Priston Tale Brasil) usando OCR (Reconhecimento Óptico de Caracteres).
+Como o jogo não disponibiliza meios adequados para rastreio de EXP, essa ferramenta surge como solução externa, exibindo um overlay transparente com estatísticas detalhadas sobre seu progresso.
 
-OverlayBPT é uma aplicação C# que monitora a experiência (EXP) em tempo real no jogo BPT (Priston Tale Brasil) usando reconhecimento óptico de caracteres (OCR). Uma vez que a empresa do jogo não disponibiliza de meios adequados para o rastreio de experiência para cálculo de métricas surge então a necessidade de uma aplicação externa para isso. O programa exibe um overlay transparente com estatísticas detalhadas sobre seu progresso no jogo.
+✨ Funcionalidades Principais
+🖥️ Captura de Tela Inteligente
+Permite selecionar a área do jogo onde o EXP é exibido.
 
-Funcionalidades Principais
-🖥️ Captura de tela inteligente: Seleciona a área do jogo onde o EXP é exibido
-Devido a variação na resolução de monitores, é aconselhável definir por conta própria a área de captura da experiência.
+Ideal para diferentes resoluções de monitores.
 
-🔍 Reconhecimento de texto: Utiliza Tesseract OCR para ler valores de EXP da tela
+Modo de seleção ativado com F10.
 
-📊 Estatísticas em tempo real:
+🔍 Reconhecimento de Texto
+Utiliza Tesseract OCR para ler os valores de EXP diretamente da tela.
 
-EXP atual formatado (milhões, bilhões, trilhões)
+📊 Estatísticas em Tempo Real
+EXP atual formatado (milhões, bilhões, trilhões).
 
-EXP total ganho na sessão
+EXP total ganho na sessão.
 
-Média de EXP por hora
+Média de EXP por hora.
 
-Tempo restante estimado para próximo nível
+Estimativa de tempo restante para o próximo nível.
 
-⏱️ Monitoramento de eficiência:
+⏱️ Monitoramento de Eficiência
+Considera apenas o tempo real de caça.
 
-Tempo ativo real (considera apenas períodos de hunt)
+Histórico dos últimos 60 minutos para cálculo de média de EXP/hora.
 
-Histórico de EXP dos últimos 60 minutos para cálculo de média por hora
+🖱️ Interface Intuitiva
+Overlay transparente e reposicionável.
 
-🖱️ Interface intuitiva:
+Modo de seleção de área fácil de usar.
 
-Overlay transparente e reposicionável
+Design minimalista inspirado no HUD nativo do jogo.
 
-Modo de seleção de área (F10)
+▶️ Como Usar
+Inicie o aplicativo antes ou durante o jogo.
 
-Design minimalista que não atrapalha a jogabilidade e simula layout de HUDs do cliente nativo.
+Pressione F10 para entrar no modo de seleção de área.
 
-Como Usar
-Inicie o aplicativo antes ou durante o jogo
+Selecione com o mouse a região onde o EXP aparece.
 
-Pressione F10 para entrar no modo de seleção de área
+Aguarde a captura automática (padrão: a cada 10 segundos — configurável).
 
-Selecione a região da tela onde o EXP é exibido (arraste com o mouse)
+Acompanhe as estatísticas diretamente no overlay.
 
-Aguarde a captura automática 
-Por default: 10 segundos - você pode ajustar de acordo com o que achar que funciona melhor para si.
-
-Acompanhe as estatísticas no overlay transparente
-
-Teclas de Atalho
+⌨️ Teclas de Atalho
 Tecla	Ação
 F10	Ativar/desativar seleção de área
-Arrastar	Mover a janela (arrastar pela barra de título)
+Arrastar	Mover a janela (pela barra de título)
 X	Fechar o aplicativo
-Pré-requisitos
+
+📦 Pré-requisitos
 Windows 7 ou superior
 
 .NET Framework 4.7.2 ou superior
 
-Pacote de idiomas Tesseract (já incluído)
+Pacote de idiomas do Tesseract (já incluído)
 
-Jogo BPT em execução em modo janela ou tela cheia
+Jogo BPT rodando em modo janela ou tela cheia
 
-Instalação e Execução
-Método 1: Executável pré-compilado
-Baixe o último release na página de releases
+⚙️ Instalação e Execução
+Método 1: Executável Pré-Compilado
+Baixe o último release na página de releases.
 
-Extraia o arquivo ZIP
+Extraia o arquivo .zip.
 
-Execute OverlayBPT.exe
+Execute OverlayBPT.exe.
 
-Método 2: Compilar a partir do código
+Método 2: Compilar a Partir do Código
 bash
+Copy
+Edit
 # Clone o repositório
 git clone https://github.com/felipegodoy96/OverlayBPT.git
 
-# Abra a solução no Visual Studio
+# Acesse a pasta do projeto
 cd OverlayBPT
+
+# Abra a solução no Visual Studio
 start OverlayBPT.sln
 
-# Compile e execute (Ctrl+F5)
-Limitações Conhecidas
-Requer que os valores de EXP estejam visíveis na tela
+# Compile e execute (Ctrl + F5)
+⚠️ Limitações Conhecidas
+O EXP precisa estar visível na tela.
 
-Performance pode variar dependendo do hardware
+Performance pode variar conforme o hardware.
 
-Pode ter dificuldade com fontes muito pequenas ou contrastes baixos
+Pode ter dificuldades com fontes pequenas ou baixo contraste.
 
-
-Estrutura do Projeto
+🗂️ Estrutura do Projeto
+bash
+Copy
+Edit
 OverlayBPT/
 ├── Main.cs            # Ponto de entrada da aplicação
 ├── OverlayForm.cs     # Lógica principal do overlay
 ├── tessdata/          # Dados de treinamento do OCR
 ├── packages/          # Dependências do projeto (Tesseract, etc.)
 └── Properties/        # Configurações da aplicação
-Contribuição
-Contribuições são bem-vindas! Siga estes passos:
+🤝 Contribuição
+Contribuições são bem-vindas! Para colaborar:
 
-Faça um fork do projeto
+Faça um fork do projeto.
 
-Crie uma branch para sua feature (git checkout -b feature/nova-feature)
+Crie uma branch:
+git checkout -b feature/nova-feature
 
-Commit suas mudanças (git commit -m 'Adiciona nova feature')
+Commit suas mudanças:
+git commit -m 'Adiciona nova feature'
 
-Push para a branch (git push origin feature/nova-feature)
+Envie para seu fork:
+git push origin feature/nova-feature
 
-Abra um Pull Request
+Abra um Pull Request.
 
-Licença
-Distribuído sob a licença MIT. Veja LICENSE para mais informações.
+📄 Licença
+Distribuído sob a licença MIT.
+Consulte o arquivo LICENSE para mais informações.
 
-Contato
-Felipe Godoy - https://www.linkedin.com/in/felipegodoy-dev/
+📬 Contato
+Felipe Godoy
+🔗 LinkedIn
+🔗 GitHub do Projeto
 
-Link do Projeto: https://github.com/felipegodoy96/OverlayBPT
-
-Nota: Este projeto é independente e não possui afiliação com a Zenit Games ou qualquer entidade relacionada ao jogo BPT. Use por sua própria conta e risco. O programa não altera memória do jogo, portanto, em hipótese nenhuma pode ser considerado nocivo ou trapaça.
+⚠️ Este projeto é independente e não possui afiliação com a Zenit Games ou qualquer entidade relacionada ao jogo BPT. Use por sua própria conta e risco. O programa não altera a memória do jogo, portanto, em hipótese alguma pode ser considerado trapaça.
