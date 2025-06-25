@@ -3,7 +3,7 @@
 
 > **Este projeto foi descontinuado.**
 
-O OverlayBPT surgiu como uma solução independente para suprir a ausência de ferramentas adequadas no jogo **Priston Tale Brasil** para rastreamento de experiência (EXP). Após o desenvolvimento e uso interno, uma solução oficial ~~muito~~básica foi eventualmente implementada pelos desenvolvedores do jogo.
+O OverlayBPT surgiu como uma solução independente para suprir a ausência de ferramentas adequadas no jogo **Priston Tale Brasil** para rastreamento de experiência (EXP). Após o desenvolvimento e uso interno, uma solução oficial ~~muito~~ básica foi eventualmente implementada pelos desenvolvedores do jogo.
 
 Por conta disso, este projeto agora se torna público/open-source.
 
